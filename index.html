@@ -15,7 +15,13 @@
 
     <nav>
         <div class="logo">
-            <img src="assets/icon.png" alt="EasyGains" class="logo-icon">
+            <svg class="logo-icon" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="6" width="5" height="6" rx="2" fill="white"/>
+                <rect x="5" y="4" width="3" height="10" rx="1.5" fill="white"/>
+                <rect x="8" y="7" width="16" height="4" rx="2" fill="white"/>
+                <rect x="24" y="4" width="3" height="10" rx="1.5" fill="white"/>
+                <rect x="27" y="6" width="5" height="6" rx="2" fill="white"/>
+            </svg>
             EasyGains
         </div>
         <a href="#download" class="btn-nav">Download</a>
@@ -30,15 +36,15 @@
 
     <section class="screenshots">
         <div class="phone-row">
-            <div class="phone-wrap">
+            <div class="phone-wrap" onclick="setFeatured(this)">
                 <img src="assets/screenshots/home.png" alt="EasyGains home screen showing macro rings" class="phone-screen">
                 <p class="screen-label">Your macros at a glance</p>
             </div>
-            <div class="phone-wrap featured">
+            <div class="phone-wrap featured" onclick="setFeatured(this)">
                 <img src="assets/screenshots/voice.png" alt="Voice input screen" class="phone-screen">
                 <p class="screen-label">Just say what you ate</p>
             </div>
-            <div class="phone-wrap">
+            <div class="phone-wrap" onclick="setFeatured(this)">
                 <img src="assets/screenshots/weekly.png" alt="Weekly analytics view" class="phone-screen">
                 <p class="screen-label">Weekly view is the real metric</p>
             </div>
@@ -51,11 +57,6 @@
                 <span class="feature-icon">🎙️</span>
                 <h3>Voice-first, always</h3>
                 <p>Say "chicken breast and rice" or "45 minute run, effort was a 7." EasyGains parses it instantly and logs it.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">💪</span>
-                <h3>Protein is the hero</h3>
-                <p>Your protein target is front and center. Hit 75–80% and you're winning. Everything else fills in around it.</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">📅</span>
@@ -86,7 +87,7 @@
             <div class="pricing-card pro">
                 <div class="pro-badge">Pro</div>
                 <h3>EasyGains Pro</h3>
-                <p class="price">$5.99<span>/mo</span></p>
+                <p class="price">$6.99<span>/mo</span></p>
                 <ul>
                     <li>Unlimited voice entries</li>
                     <li>Smart clarifying questions</li>
@@ -127,13 +128,20 @@
                 <p>Check that microphone and speech recognition permissions are enabled in iPhone Settings → EasyGains.</p>
             </div>
         </div>
-        <p class="support-contact">Still stuck? Email us at <a href="mailto:support@easygains.app">support@easygains.app</a></p>
+        <p class="support-contact">Still stuck? Email us at <a href="mailto:everyone@whimsyxm.com">everyone@whimsyxm.com</a></p>
     </section>
 
     <footer>
         <p>© 2026 EasyGains · <a href="#support">Support</a> · <a href="#pricing">Pricing</a></p>
         <p class="footer-sub">Made by <a href="https://extramediumal.github.io" target="_blank">XtraMedium</a></p>
     </footer>
+
+    <script>
+        function setFeatured(el) {
+            document.querySelectorAll('.phone-wrap').forEach(w => w.classList.remove('featured'));
+            el.classList.add('featured');
+        }
+    </script>
 
 </body>
 </html>
