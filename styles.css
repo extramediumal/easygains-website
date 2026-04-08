@@ -397,6 +397,10 @@ nav {
     height: 20px;
 }
 
+.hero-android {
+    margin-top: 1rem;
+}
+
 /* Support */
 .support {
     padding: 5rem 5%;
